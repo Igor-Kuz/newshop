@@ -1,5 +1,6 @@
 # newshop 
 ecommerce shop project
+
 educational project
 
 Открыть терминал или консоль и перейти в нужную Вам директорию
