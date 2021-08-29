@@ -6,23 +6,23 @@ from django.http import HttpResponseRedirect, JsonResponse
 
 from .models import CategoryFeature, FeatureValidator, ProductFeatures
 from .forms import NewCategoryFeatureKeyForm, NewCategoryForm
-from mainapp.models import Category, Product
+from mainapp.models import *
 
 
 class BaseSpecView(View):
-    def get(self, request, *args, **kwargs):
-        return  render(request, 'product_features.html', {})
+    def get(self, request):
+        return render(request, 'product_features.html', {})
 
 
 class CreateNewFeature(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         form = NewCategoryFeatureKeyForm(request.POST or None)
         context = {'form': form}
         return render(request, 'new_feature.html', context)
 
 
 class CreateNewCategory(View):
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         form = NewCategoryForm(request.POST or None)
         if form.is_valid():
             new_category = form.save(commit=False)

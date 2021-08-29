@@ -25,6 +25,7 @@ class Product(models.Model):
 	image = models.ImageField(verbose_name='Изображение')
 	description = models.TextField(verbose_name='Описание', null=True)
 	price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Цена')
+	feautures = models.ManyToManyField("specs.ProductFeatures", blank=True, related_name='features_for_product')
 
 	def __str__(self):
 		return self.title
@@ -41,7 +42,7 @@ class CartProduct(models.Model):
 	final_price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Общая цена')
 
 	def __str__(self):
-		return "Продукт: {} (для корзины)".format(self.content_object.title)
+		return "Продукт: {} (для корзины)".format(self.product.title)
 
 	def save(self, *args, **kwargs):
 		self.final_price = self.qty * self.product.price

@@ -31,6 +31,7 @@ urlpatterns = [
     path('product-feature/', ProductFeatureChoicesAjaxView.as_view(), name='product-feature'),
     path('attach-new-product-feature/', CreateNewProductFeatureAjaxView.as_view(), name='attach-new-product-feature'),
     path('update-product-features/', UpdateProductFeaturesView.as_view(), name='update-product-features'),
-    path('show-product-features-for-update/', ShowProductFeaturesForUpdate.as_view(), name='show-product-features-for-update'),
+    path('show-product-features-for-update/', ShowProductFeaturesForUpdate.as_view(),
+         name='show-product-features-for-update'),
     path('update-product-features-ajax/', UpdateProductFeaturesAjaxView.as_view(), name='update-product-features-ajax')
 ]
