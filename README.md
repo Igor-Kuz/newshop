@@ -1,24 +1,41 @@
-# newshop 
-### ecommerce shop project based on Django framework.
+# E-commerce shop project based on Django framework. [![Build Status](https://app.travis-ci.com/Igor-Kuz/newshop.svg?branch=main)](https://app.travis-ci.com/Igor-Kuz/newshop)
+
 ### This project supports the following functions:
 - registration of user
 - authorization,
 - adding goods to shop,
+- adding images of goods
 - search,
 
 
+### For creating characteristics for goods in this project has been created separate app. 
+### In this part of project user can:
+- Create new category
+- Create new characteristic(description) for goods
+- Create value of characteristic 
+- Create characteristic for goods
+- Edit characteristics of goods
+### So to create characteristics you need:
+- Go to the admin area and create a product
+- On the product page in the admin panel there will be a button "Create characteristics for the product"
+- After that you will be taken to the characteristics admin page
+- First, you need to create a characteristic and select the category to which it belongs.
+- After that, you need to create a value for this characteristic.
 
-
-
+Then, you can go to the next link - 'creating characteristics' for the product itself.
 
  
-**Стек:**
+**Stack:**
 
  - Python >= 3.7
 
 - Django >= 3
 
-- requests >= 2.23.0
+- django-crispy-forms==1.13.0
+
+- Pillow==8.4.0
+
+- bootstrap4
 
 - sqlite3
 
