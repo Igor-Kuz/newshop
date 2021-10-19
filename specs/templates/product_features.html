@@ -17,7 +17,7 @@
 </style>
 <body>
 <div class="container">
-<h3 class="text-center">Админка характеристик</h3>
+<h3 class="text-center">Административная страница создания и редактирования характеристик товара</h3>
 <hr>
 {% if messages %}
     {% for message in messages %}
@@ -40,9 +40,9 @@
     Создать значение характеристики
   </a>
     <a href="{% url 'new-product-feature' %}" class="list-group-item list-group-item-action {% if request.path == "/product-specs/new-product-feature/" %}active{% endif %}" aria-current="true">
-    Создать характеристику для товара
+    Создать характеристику товара
     <a href="{% url 'update-product-features' %}" class="list-group-item list-group-item-action {% if request.path == "/product-specs/update-product-features/" %}active{% endif %}" aria-current="true">
-    Редактировать характеристику для товара
+    Редактировать характеристику товара
   </a>
 </div>
     </div>

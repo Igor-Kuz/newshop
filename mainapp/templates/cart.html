@@ -19,7 +19,7 @@
       <th scope="col">Наименование</th>
       <th scope="col">Изображение</th>
       <th scope="col">Цена</th>
-      <th scope="col">Кол-во</th>
+      <th scope="col">Количество</th>
         <th scope="col">Общая цена</th>
       <th scope="col">Действие</th>
     </tr>
@@ -35,7 +35,7 @@
               {% csrf_token %}
               <input type="number" class="form-control" name="qty" style="width: 70px;" min="1" value="{{ item.qty }}">
               <br>
-              <input type="submit" class="btn btn-primary" value="Изменить кол-во">
+              <input type="submit" class="btn btn-primary" value="Изменить количествово">
             </form>
           </td>
             <td>{{ item.final_price }} руб.</td>

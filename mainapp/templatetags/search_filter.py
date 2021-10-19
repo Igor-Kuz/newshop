@@ -3,8 +3,8 @@ from collections import defaultdict
 from django import template
 from django.utils.safestring import mark_safe
 
-# from specs.models import ProductFeatures
+from specs.models import ProductFeatures
 
-#register = template.Library()
+register = template.Library()
 
-#@register.filter
+# @register.filter

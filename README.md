@@ -1,34 +1,67 @@
 # newshop 
-ecommerce shop project
-
-educational project
-
-Открыть терминал или консоль и перейти в нужную Вам директорию
-Прописать команду git clone git@github.com:Igor-Kuz/newshop.git
-
-Если Вы используете https, то: git clone https://github.com/Igor-Kuz/newshop.git
-Прописать следующие команды:
+### ecommerce shop project based on Django framework.
+### This project supports the following functions:
+- registration of user
+- authorization,
+- adding goods to shop,
+- search,
 
 
-python3 -m venv ДиректорияВиртуальногоОкружения
-source ДиректорияВиртуальногоОкружения/scripts/activate  или source ДиректорияВиртуальногоОкружения/bin/activate для Linux & MacOS
-Перейти в директорию 
-
-Установить необходимые библиотеки
-pip install -r requirements.txt
-python manage.py makemigrations
-python manage.py migrate
 
 
+
+
+ 
+**Стек:**
+
+ - Python >= 3.7
+
+- Django >= 3
+
+- requests >= 2.23.0
+
+- sqlite3
+
+### Инструменты разработки
+##### 1) Открыть терминал или консоль и перейти в нужную Вам директорию
+
+##### 2) Клонировать репозиторий и поставить звездочку)
+    git clone git@github.com:Igor-Kuz/newshop.git
+
+##### 3) Если Вы используете https, то: 
+    git clone https://github.com/Igor-Kuz/newshop.git
+    
+    
+##### 4) Создать виртуальное окружение
+    python -m venv venv
+
+##### 5) Активировать виртуальное окружение
+
+    source venv/scripts/activate
+##### или для Linux & MacOS
+    source venv/bin/activate 
+   
+#### 6) Перейти в директорию newshop и  установить необходимые библиотеки командой
+    pip install -r requirements.txt
+
+##### 7) Выполнить миграции
+    python manage.py makemigrations
+    
+    python manage.py migrate
+
+##### 8) Создать суперпользователя
+    python manage.py createsuperuser
+
+##### 9) Запустить сервер
 Запустить сервер - python manage.py runserver
 
-Важно создать директорию media, куда будут сохраняться изображения товара
+#### После клонированя репозитория не забудьте создать директорию media, куда будут сохраняться изображения товара
 
-Создание характеристик для товара
+#### Создание характеристик для товара
 
 Зайти в админку и создайте товар
-На странице этого же товара в админке будет кнопка "Создать характеристики для товара"
+На странице товара в админке будет кнопка "Создать характеристики для товара"
 После этого вы попадете на страницу админки характеристик
 Сначала необходимо создать характеристику и выбрать категорию, к которой она относится
-После этого необходимо создать для этой характеристики значение
-Как только все вышеперечисленное сделали, можно переходить к следующей ссылке - создание характеристики для самого товара.
+После этого необходимо создать для этой характеристики значение.
+Затем, можно переходить к следующей ссылке - создание характеристики для самого товара.
